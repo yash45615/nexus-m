@@ -1,0 +1,75 @@
+{
+    "project": "NEXUS-M",
+    "datasets": {
+        "transactions.csv": {
+            "type": "source",
+            "location": "data/synthetic/transactions.csv",
+            "description": "Synthetic payment transaction source data"
+        },
+        "transactions_cleaned": {
+            "type": "transformation",
+            "depends_on": [
+                "transactions.csv"
+            ],
+            "transformations": [
+                "duplicate removal",
+                "status standardization",
+                "payment method standardization",
+                "numeric normalization"
+            ]
+        },
+        "transactions_enriched": {
+            "type": "transformation",
+            "depends_on": [
+                "transactions_cleaned",
+                "dim_merchant.csv",
+                "dim_partner.csv",
+                "dim_region.csv",
+                "dim_category.csv"
+            ],
+            "transformations": [
+                "merchant join",
+                "partner join",
+                "region join",
+                "category join",
+                "derived feature creation"
+            ]
+        },
+        "daily_kpis": {
+            "type": "analytical_mart",
+            "depends_on": [
+                "transactions_enriched"
+            ],
+            "transformations": [
+                "daily aggregation",
+                "authorization rate",
+                "failure rate",
+                "latency metrics"
+            ]
+        },
+        "partner_kpis": {
+            "type": "analytical_mart",
+            "depends_on": [
+                "transactions_enriched"
+            ],
+            "transformations": [
+                "partner aggregation",
+                "authorization rate",
+                "failure rate",
+                "latency metrics"
+            ]
+        },
+        "regional_kpis": {
+            "type": "analytical_mart",
+            "depends_on": [
+                "transactions_enriched"
+            ],
+            "transformations": [
+                "regional aggregation",
+                "authorization rate",
+                "failure rate",
+                "latency metrics"
+            ]
+        }
+    }
+}

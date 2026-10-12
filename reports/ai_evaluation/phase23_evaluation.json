@@ -1,0 +1,223 @@
+{
+  "evaluation": "NEXUS-M Phase 23",
+  "summary": {
+    "case_count": 8,
+    "exact_match_accuracy": 0.625,
+    "macro_precision": 0.7812,
+    "macro_recall": 1.0,
+    "macro_f1": 0.8417,
+    "passed_cases": 5,
+    "failed_cases": 3
+  },
+  "results": [
+    {
+      "id": "EVAL-001",
+      "question": "Show the overall payment KPI summary",
+      "expected_tools": [
+        "get_kpis"
+      ],
+      "predicted_tools": [
+        "get_kpis"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_match": true,
+      "true_positive": 1,
+      "false_positive": 0,
+      "false_negative": 0,
+      "runtime": {
+        "status": "ok",
+        "evidence_item_count": 5,
+        "grounded_evidence_item_count": 5,
+        "evidence_grounding_rate": 1.0,
+        "limitations": []
+      }
+    },
+    {
+      "id": "EVAL-002",
+      "question": "Why are payment approval rates declining?",
+      "expected_tools": [
+        "get_kpis",
+        "list_anomalies"
+      ],
+      "predicted_tools": [
+        "get_kpis",
+        "list_anomalies"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_match": true,
+      "true_positive": 2,
+      "false_positive": 0,
+      "false_negative": 0,
+      "runtime": {
+        "status": "ok",
+        "evidence_item_count": 8,
+        "grounded_evidence_item_count": 8,
+        "evidence_grounding_rate": 1.0,
+        "limitations": []
+      }
+    },
+    {
+      "id": "EVAL-003",
+      "question": "Investigate settlement mismatches and reconciliation exceptions",
+      "expected_tools": [
+        "get_reconciliation"
+      ],
+      "predicted_tools": [
+        "get_kpis",
+        "list_anomalies",
+        "get_reconciliation",
+        "list_opportunities"
+      ],
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "exact_match": false,
+      "true_positive": 1,
+      "false_positive": 3,
+      "false_negative": 0,
+      "runtime": {
+        "status": "ok",
+        "evidence_item_count": 16,
+        "grounded_evidence_item_count": 16,
+        "evidence_grounding_rate": 1.0,
+        "limitations": []
+      }
+    },
+    {
+      "id": "EVAL-004",
+      "question": "Which opportunities should we prioritize for recovery?",
+      "expected_tools": [
+        "list_opportunities"
+      ],
+      "predicted_tools": [
+        "list_opportunities"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_match": true,
+      "true_positive": 1,
+      "false_positive": 0,
+      "false_negative": 0,
+      "runtime": {
+        "status": "ok",
+        "evidence_item_count": 5,
+        "grounded_evidence_item_count": 5,
+        "evidence_grounding_rate": 1.0,
+        "limitations": []
+      }
+    },
+    {
+      "id": "EVAL-005",
+      "question": "Compare partner performance",
+      "expected_tools": [
+        "list_partners"
+      ],
+      "predicted_tools": [
+        "get_kpis",
+        "list_partners"
+      ],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667,
+      "exact_match": false,
+      "true_positive": 1,
+      "false_positive": 1,
+      "false_negative": 0,
+      "runtime": {
+        "status": "ok",
+        "evidence_item_count": 9,
+        "grounded_evidence_item_count": 9,
+        "evidence_grounding_rate": 1.0,
+        "limitations": []
+      }
+    },
+    {
+      "id": "EVAL-006",
+      "question": "Compare performance across regions",
+      "expected_tools": [
+        "list_regions"
+      ],
+      "predicted_tools": [
+        "get_kpis",
+        "list_regions"
+      ],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667,
+      "exact_match": false,
+      "true_positive": 1,
+      "false_positive": 1,
+      "false_negative": 0,
+      "runtime": {
+        "status": "ok",
+        "evidence_item_count": 9,
+        "grounded_evidence_item_count": 9,
+        "evidence_grounding_rate": 1.0,
+        "limitations": []
+      }
+    },
+    {
+      "id": "EVAL-007",
+      "question": "Tell me a joke about penguins",
+      "expected_tools": [],
+      "predicted_tools": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_match": true,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0,
+      "runtime": {
+        "status": "no_matching_tools",
+        "evidence_item_count": 0,
+        "grounded_evidence_item_count": 0,
+        "evidence_grounding_rate": 0.0,
+        "limitations": [
+          "Rephrase the question using terms such as KPI, partner, region, anomaly, opportunity, or reconciliation."
+        ]
+      }
+    },
+    {
+      "id": "EVAL-008",
+      "question": "Run a comprehensive investigation and tell me what to prioritize",
+      "expected_tools": [
+        "get_kpis",
+        "list_anomalies",
+        "get_reconciliation",
+        "list_opportunities"
+      ],
+      "predicted_tools": [
+        "get_kpis",
+        "list_anomalies",
+        "get_reconciliation",
+        "list_opportunities"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_match": true,
+      "true_positive": 4,
+      "false_positive": 0,
+      "false_negative": 0,
+      "runtime": {
+        "status": "ok",
+        "evidence_item_count": 16,
+        "grounded_evidence_item_count": 16,
+        "evidence_grounding_rate": 1.0,
+        "limitations": []
+      }
+    }
+  ],
+  "notes": [
+    "Expected tools are manually defined benchmark labels.",
+    "High tool-selection scores do not prove business-answer correctness.",
+    "Evidence grounding checks source and record presence, not factual truth.",
+    "Runtime evaluation can return no data if processed artifacts are absent."
+  ]
+}

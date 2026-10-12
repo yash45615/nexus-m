@@ -1,0 +1,61 @@
+{
+    "dataset": "transactions",
+    "business_owner": "Payments Analytics",
+    "technical_owner": "NEXUS-M Data Platform",
+    "description": "Transaction-level payment processing data used for merchant, partner, regional and operational analytics.",
+    "columns": {
+        "transaction_id": {
+            "description": "Unique identifier for a payment transaction.",
+            "data_type": "string",
+            "business_definition": "Unique payment transaction identifier.",
+            "nullable": false,
+            "classification": "internal"
+        },
+        "transaction_amount": {
+            "description": "Monetary value of the transaction.",
+            "data_type": "numeric",
+            "business_definition": "Gross monetary value associated with a payment attempt.",
+            "nullable": false,
+            "classification": "financial"
+        },
+        "processing_time_ms": {
+            "description": "Payment processing latency in milliseconds.",
+            "data_type": "numeric",
+            "business_definition": "Elapsed processing time for a payment transaction.",
+            "nullable": false,
+            "classification": "operational"
+        },
+        "status": {
+            "description": "Final processing status of the transaction.",
+            "data_type": "string",
+            "business_definition": "Indicates whether the transaction succeeded or failed.",
+            "allowed_values": [
+                "SUCCESS",
+                "FAILED"
+            ],
+            "nullable": false,
+            "classification": "operational"
+        },
+        "payment_method": {
+            "description": "Payment method used for the transaction.",
+            "data_type": "string",
+            "business_definition": "Payment instrument or method used by the customer.",
+            "nullable": false,
+            "classification": "internal"
+        },
+        "created_at": {
+            "description": "Timestamp at which the transaction was created.",
+            "data_type": "timestamp",
+            "business_definition": "Transaction event creation timestamp.",
+            "nullable": false,
+            "classification": "operational"
+        },
+        "incident_flag": {
+            "description": "Indicates whether the transaction occurred during a known incident period.",
+            "data_type": "boolean",
+            "business_definition": "Operational incident indicator used for root-cause analysis.",
+            "nullable": false,
+            "classification": "internal"
+        }
+    }
+}

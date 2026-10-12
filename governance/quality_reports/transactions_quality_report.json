@@ -1,0 +1,321 @@
+{
+    "dataset": "transactions",
+    "source": "D:\\nexus-m\\data\\synthetic\\transactions.csv",
+    "row_count": 251250,
+    "column_count": 14,
+    "column_types": {
+        "transaction_id": "object",
+        "date_key": "int64",
+        "merchant_key": "float64",
+        "partner_key": "int64",
+        "region_key": "int64",
+        "category_key": "int64",
+        "error_code": "object",
+        "transaction_amount": "float64",
+        "processing_time_ms": "float64",
+        "status": "object",
+        "payment_method": "object",
+        "created_at": "object",
+        "incident_flag": "bool",
+        "weekend_flag": "bool"
+    },
+    "quality_summary": {
+        "quality_score": 82.61,
+        "total_checks": 23,
+        "passed_checks": 19,
+        "failed_checks": 4,
+        "warning_checks": 0,
+        "status": "FAIL"
+    },
+    "checks": [
+        {
+            "check_name": "required_columns",
+            "check_type": "schema",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": [
+                "transaction_id",
+                "date_key",
+                "merchant_key",
+                "partner_key",
+                "region_key",
+                "category_key",
+                "error_code",
+                "transaction_amount",
+                "processing_time_ms",
+                "status",
+                "payment_method",
+                "created_at",
+                "incident_flag",
+                "weekend_flag"
+            ],
+            "expected_value": [
+                "transaction_id",
+                "transaction_amount",
+                "processing_time_ms",
+                "status",
+                "created_at"
+            ],
+            "missing_columns": [],
+            "message": "All required columns are present."
+        },
+        {
+            "check_name": "unexpected_columns",
+            "check_type": "schema",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": [
+                "transaction_id",
+                "date_key",
+                "merchant_key",
+                "partner_key",
+                "region_key",
+                "category_key",
+                "error_code",
+                "transaction_amount",
+                "processing_time_ms",
+                "status",
+                "payment_method",
+                "created_at",
+                "incident_flag",
+                "weekend_flag"
+            ],
+            "expected_value": [
+                "transaction_id",
+                "date_key",
+                "merchant_key",
+                "partner_key",
+                "region_key",
+                "category_key",
+                "error_code",
+                "transaction_amount",
+                "processing_time_ms",
+                "status",
+                "payment_method",
+                "created_at",
+                "incident_flag",
+                "weekend_flag"
+            ],
+            "unexpected_columns": [],
+            "message": "No unexpected columns detected."
+        },
+        {
+            "check_name": "row_count",
+            "check_type": "completeness",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 251250,
+            "expected_value": ">= 1",
+            "message": "Dataset contains an acceptable number of rows."
+        },
+        {
+            "check_name": "null_check_transaction_id",
+            "check_type": "completeness",
+            "column": "transaction_id",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0.0,
+            "expected_value": "<= 5.0%",
+            "message": "transaction_id has acceptable null percentage."
+        },
+        {
+            "check_name": "null_check_date_key",
+            "check_type": "completeness",
+            "column": "date_key",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0.0,
+            "expected_value": "<= 5.0%",
+            "message": "date_key has acceptable null percentage."
+        },
+        {
+            "check_name": "null_check_merchant_key",
+            "check_type": "completeness",
+            "column": "merchant_key",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0.1998,
+            "expected_value": "<= 5.0%",
+            "message": "merchant_key has acceptable null percentage."
+        },
+        {
+            "check_name": "null_check_partner_key",
+            "check_type": "completeness",
+            "column": "partner_key",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0.0,
+            "expected_value": "<= 5.0%",
+            "message": "partner_key has acceptable null percentage."
+        },
+        {
+            "check_name": "null_check_region_key",
+            "check_type": "completeness",
+            "column": "region_key",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0.0,
+            "expected_value": "<= 5.0%",
+            "message": "region_key has acceptable null percentage."
+        },
+        {
+            "check_name": "null_check_category_key",
+            "check_type": "completeness",
+            "column": "category_key",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0.0,
+            "expected_value": "<= 5.0%",
+            "message": "category_key has acceptable null percentage."
+        },
+        {
+            "check_name": "null_check_error_code",
+            "check_type": "completeness",
+            "column": "error_code",
+            "status": "FAIL",
+            "passed": false,
+            "actual_value": 95.112,
+            "expected_value": "<= 5.0%",
+            "message": "error_code exceeds the allowed null percentage."
+        },
+        {
+            "check_name": "null_check_transaction_amount",
+            "check_type": "completeness",
+            "column": "transaction_amount",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0.0,
+            "expected_value": "<= 5.0%",
+            "message": "transaction_amount has acceptable null percentage."
+        },
+        {
+            "check_name": "null_check_processing_time_ms",
+            "check_type": "completeness",
+            "column": "processing_time_ms",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0.0,
+            "expected_value": "<= 5.0%",
+            "message": "processing_time_ms has acceptable null percentage."
+        },
+        {
+            "check_name": "null_check_status",
+            "check_type": "completeness",
+            "column": "status",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0.0,
+            "expected_value": "<= 5.0%",
+            "message": "status has acceptable null percentage."
+        },
+        {
+            "check_name": "null_check_payment_method",
+            "check_type": "completeness",
+            "column": "payment_method",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0.0,
+            "expected_value": "<= 5.0%",
+            "message": "payment_method has acceptable null percentage."
+        },
+        {
+            "check_name": "null_check_created_at",
+            "check_type": "completeness",
+            "column": "created_at",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0.0,
+            "expected_value": "<= 5.0%",
+            "message": "created_at has acceptable null percentage."
+        },
+        {
+            "check_name": "null_check_incident_flag",
+            "check_type": "completeness",
+            "column": "incident_flag",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0.0,
+            "expected_value": "<= 5.0%",
+            "message": "incident_flag has acceptable null percentage."
+        },
+        {
+            "check_name": "null_check_weekend_flag",
+            "check_type": "completeness",
+            "column": "weekend_flag",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0.0,
+            "expected_value": "<= 5.0%",
+            "message": "weekend_flag has acceptable null percentage."
+        },
+        {
+            "check_name": "duplicate_check_transaction_id",
+            "check_type": "uniqueness",
+            "column": "transaction_id",
+            "status": "FAIL",
+            "passed": false,
+            "actual_value": 1250,
+            "expected_value": 0,
+            "message": "1250 duplicate keys detected."
+        },
+        {
+            "check_name": "range_check_transaction_amount",
+            "check_type": "validity",
+            "column": "transaction_amount",
+            "status": "FAIL",
+            "passed": false,
+            "actual_value": 251,
+            "expected_value": {
+                "minimum": 0,
+                "maximum": null
+            },
+            "message": "251 transaction_amount values are outside the expected range."
+        },
+        {
+            "check_name": "range_check_processing_time_ms",
+            "check_type": "validity",
+            "column": "processing_time_ms",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0,
+            "expected_value": {
+                "minimum": 0,
+                "maximum": 60000
+            },
+            "message": "All processing_time_ms values are within the expected range."
+        },
+        {
+            "check_name": "allowed_values_status",
+            "check_type": "validity",
+            "column": "status",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0,
+            "expected_value": [
+                "SUCCESS",
+                "FAILED"
+            ],
+            "message": "All status values are valid."
+        },
+        {
+            "check_name": "negative_check_transaction_amount",
+            "check_type": "validity",
+            "column": "transaction_amount",
+            "status": "FAIL",
+            "passed": false,
+            "actual_value": 251,
+            "expected_value": 0,
+            "message": "251 negative values found in transaction_amount."
+        },
+        {
+            "check_name": "timestamp_check_created_at",
+            "check_type": "validity",
+            "column": "created_at",
+            "status": "PASS",
+            "passed": true,
+            "actual_value": 0,
+            "expected_value": 0,
+            "message": "All created_at timestamps are valid."
+        }
+    ]
+}

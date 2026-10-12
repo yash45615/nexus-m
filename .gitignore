@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data
+data/raw/*
+data/processed/*
+data/synthetic/*
+data/vector_store/*
+
+# Logs
+*.log
+logs/
+
+# PySpark
+spark-warehouse/
+metastore_db/
+
+# Airflow
+airflow.db
+airflow.cfg
+airflow_home/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Power BI temporary files
+*.pbit

@@ -1,0 +1,24 @@
+check_name,check_type,status,passed,actual_value,expected_value,missing_columns,message,unexpected_columns,column
+required_columns,schema,PASS,True,"['transaction_id', 'date_key', 'merchant_key', 'partner_key', 'region_key', 'category_key', 'error_code', 'transaction_amount', 'processing_time_ms', 'status', 'payment_method', 'created_at', 'incident_flag', 'weekend_flag']","['transaction_id', 'transaction_amount', 'processing_time_ms', 'status', 'created_at']",[],All required columns are present.,,
+unexpected_columns,schema,PASS,True,"['transaction_id', 'date_key', 'merchant_key', 'partner_key', 'region_key', 'category_key', 'error_code', 'transaction_amount', 'processing_time_ms', 'status', 'payment_method', 'created_at', 'incident_flag', 'weekend_flag']","['transaction_id', 'date_key', 'merchant_key', 'partner_key', 'region_key', 'category_key', 'error_code', 'transaction_amount', 'processing_time_ms', 'status', 'payment_method', 'created_at', 'incident_flag', 'weekend_flag']",,No unexpected columns detected.,[],
+row_count,completeness,PASS,True,251250,>= 1,,Dataset contains an acceptable number of rows.,,
+null_check_transaction_id,completeness,PASS,True,0.0,<= 5.0%,,transaction_id has acceptable null percentage.,,transaction_id
+null_check_date_key,completeness,PASS,True,0.0,<= 5.0%,,date_key has acceptable null percentage.,,date_key
+null_check_merchant_key,completeness,PASS,True,0.1998,<= 5.0%,,merchant_key has acceptable null percentage.,,merchant_key
+null_check_partner_key,completeness,PASS,True,0.0,<= 5.0%,,partner_key has acceptable null percentage.,,partner_key
+null_check_region_key,completeness,PASS,True,0.0,<= 5.0%,,region_key has acceptable null percentage.,,region_key
+null_check_category_key,completeness,PASS,True,0.0,<= 5.0%,,category_key has acceptable null percentage.,,category_key
+null_check_error_code,completeness,FAIL,False,95.112,<= 5.0%,,error_code exceeds the allowed null percentage.,,error_code
+null_check_transaction_amount,completeness,PASS,True,0.0,<= 5.0%,,transaction_amount has acceptable null percentage.,,transaction_amount
+null_check_processing_time_ms,completeness,PASS,True,0.0,<= 5.0%,,processing_time_ms has acceptable null percentage.,,processing_time_ms
+null_check_status,completeness,PASS,True,0.0,<= 5.0%,,status has acceptable null percentage.,,status
+null_check_payment_method,completeness,PASS,True,0.0,<= 5.0%,,payment_method has acceptable null percentage.,,payment_method
+null_check_created_at,completeness,PASS,True,0.0,<= 5.0%,,created_at has acceptable null percentage.,,created_at
+null_check_incident_flag,completeness,PASS,True,0.0,<= 5.0%,,incident_flag has acceptable null percentage.,,incident_flag
+null_check_weekend_flag,completeness,PASS,True,0.0,<= 5.0%,,weekend_flag has acceptable null percentage.,,weekend_flag
+duplicate_check_transaction_id,uniqueness,FAIL,False,1250,0,,1250 duplicate keys detected.,,transaction_id
+range_check_transaction_amount,validity,FAIL,False,251,"{'minimum': 0, 'maximum': None}",,251 transaction_amount values are outside the expected range.,,transaction_amount
+range_check_processing_time_ms,validity,PASS,True,0,"{'minimum': 0, 'maximum': 60000}",,All processing_time_ms values are within the expected range.,,processing_time_ms
+allowed_values_status,validity,PASS,True,0,"['SUCCESS', 'FAILED']",,All status values are valid.,,status
+negative_check_transaction_amount,validity,FAIL,False,251,0,,251 negative values found in transaction_amount.,,transaction_amount
+timestamp_check_created_at,validity,PASS,True,0,0,,All created_at timestamps are valid.,,created_at

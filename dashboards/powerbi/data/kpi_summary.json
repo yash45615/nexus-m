@@ -1,0 +1,50 @@
+{
+    "transaction_count": {
+        "value": 251250.0,
+        "status": "NO_THRESHOLD"
+    },
+    "successful_transactions": {
+        "value": 238969.0,
+        "status": "NO_THRESHOLD"
+    },
+    "failed_transactions": {
+        "value": 12281.0,
+        "status": "NO_THRESHOLD"
+    },
+    "success_rate": {
+        "value": 95.11203980099503,
+        "status": "HEALTHY"
+    },
+    "failure_rate": {
+        "value": 4.887960199004975,
+        "status": "HEALTHY"
+    },
+    "total_transaction_value": {
+        "value": 615989272.66,
+        "status": "NO_THRESHOLD"
+    },
+    "successful_transaction_value": {
+        "value": 585851432.93,
+        "status": "NO_THRESHOLD"
+    },
+    "failed_transaction_value": {
+        "value": 30137839.73,
+        "status": "NO_THRESHOLD"
+    },
+    "average_transaction_value": {
+        "value": 2451.6985976517412,
+        "status": "NO_THRESHOLD"
+    },
+    "average_processing_latency": {
+        "value": 185.33261711442788,
+        "status": "NO_THRESHOLD"
+    },
+    "p95_processing_latency": {
+        "value": 264.58,
+        "status": "HEALTHY"
+    },
+    "p99_processing_latency": {
+        "value": 298.8451000000001,
+        "status": "HEALTHY"
+    }
+}

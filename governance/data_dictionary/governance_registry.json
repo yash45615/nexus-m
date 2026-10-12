@@ -1,0 +1,30 @@
+{
+    "datasets": [
+        {
+            "dataset": "transactions",
+            "owner": "Payments Analytics",
+            "steward": "NEXUS-M Data Platform",
+            "source": "Synthetic payment event generator",
+            "refresh_frequency": "Daily",
+            "criticality": "High",
+            "quality_threshold": 95,
+            "contains_pii": false,
+            "contains_financial_data": true,
+            "approved_for_ai": true,
+            "approved_for_reporting": true
+        },
+        {
+            "dataset": "transactions_enriched",
+            "owner": "Payments Analytics",
+            "steward": "NEXUS-M Data Platform",
+            "source": "PySpark transformation pipeline",
+            "refresh_frequency": "Daily",
+            "criticality": "High",
+            "quality_threshold": 95,
+            "contains_pii": false,
+            "contains_financial_data": true,
+            "approved_for_ai": true,
+            "approved_for_reporting": true
+        }
+    ]
+}
